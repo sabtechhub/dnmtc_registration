@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+          <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>DNMTC</title>
+</head>
+
+<style>
+
+
+.bg{
+
+background: url(../bg.jpg)no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover; 
+-o-background-size: cover;
+  background-size: cover;
+}
+
+
+    #box{
+        background: url(../public/bg.jpg)no-repeat center center fixed;
+        -webkit-box-shadow: -11px 23px 5px 7px rgba(0,0,0,0.45);
+        -moz-box-shadow: -11px 23px 5px 7px rgba(0,0,0,0.45);
+        box-shadow: -11px 23px 5px 7px rgba(0,0,0,0.45);
+
+        border-radius: 30px 30px 30px 30px;
+        -moz-border-radius: 30px 30px 30px 30px;
+        -webkit-border-radius: 30px 30px 30px 30px;
+        border: 1px solid #211f21;
+    }
+
+    
+.my-card{
+
+color: #fff;
+}
+
+.form-container{
+
+border: 1px solid #fff;
+padding: 10px;
+margin-top: 2vh;
+font-family: sans-serif;
+border-radius: 5PX;
+background: black;
+opacity: 0.8;
+width: auto;
+height: auto;
+-webkit-box-shadow: 0px -2px 38px 10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -2px 38px 10px rgba(0,0,0,0.75);
+box-shadow: 0px -2px 38px 10px rgba(0,0,0,0.75);
+font-size: 11px;
+
+}
+
+
+.form-container-2{
+
+border: 1px solid #fff;
+padding: 10px;
+margin-top: 2vh;
+font-family: sans-serif;
+border-radius: 15PX;
+background: black;
+opacity: 0.8;
+/* width: auto;
+height: auto; */
+-webkit-box-shadow: 0px -2px 38px 10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -2px 38px 10px rgba(0,0,0,0.75);
+box-shadow: 0px -2px 38px 10px rgba(0,0,0,0.75);
+font-size: 11px;
+
+}
+
+
+.form-container-3{
+
+border: 1px solid #fff;
+padding: 2px;
+margin-top: 2vh;
+font-family: sans-serif;
+border-radius: 15PX;
+background: black;
+opacity: 0.8;
+/* width: auto;
+height: auto; */
+-webkit-box-shadow: 0px -2px 38px 10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -2px 38px 10px rgba(0,0,0,0.75);
+box-shadow: 0px -2px 38px 10px rgba(0,0,0,0.75);
+font-size: 11px;
+
+}
+
+</style>
+<body class="bg">
+
+<div class="container">
+    <div class="row justify-content-center"> <!-- Center the columns -->
+        <div class="col-lg-6 m-2" id="box  ">
+            <div class="mt-5 form-container my-card">
+                <h5 class="text-center mb-4">DNMTC STUDENT CHOICE AWARDS</h5>
+
+                <form action="/submit-registration" method="post" class="m-5" id="form-send">
+                    <div class="mb-3 mt-5">
+                        <input placeholder="Name of Nominee" type="text" id="name" name="name" class="form-control" required>
+                    </div>
+    
+                    <div class="mb-3 mt-5">
+                        <!-- <input type="text" id="level" name="level" class="form-control" required> -->
+                        <select name="level" class="form-control" id="">
+                            <option value="" disabled selected>Select Level</option>
+                            <option value="100">Level 100</option>
+                            <option value="200">Level 200</option>
+                            <option value="300">Level 300</option>
+                        </select>
+                    </div>
+    
+                    <div class="mb-3 mt-5">
+                        <input type="tel" id="contact" name="contact" class="form-control" placeholder="Contact" required>
+                    </div>
+    
+                    <div class="mb-3 mt-5">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                    </div>
+    
+                    <div class="mb-3 mt-5">
+                        <select id="category" name="category" class="form-select" required>
+                            <option value="" disabled selected>Select a Category</option>
+                            <optgroup label="Academic and Leadership Awards">
+                                <option value="Best Student, Female">Best Student, Female</option>
+                                <option value="Best Student, Male">Best Student, Male</option>
+                                <option value="Best Class">Best Class</option>
+                                <option value="Best Course Rep">Best Course Rep</option>
+                                <option value="Most Hardworking Prefect">Most Hardworking Prefect</option>
+                                <option value="Most Disciplined Student">Most Disciplined Student</option>
+                                <option value="Best Hostel Rep">Best Hostel Rep</option>
+                            </optgroup>
+                            <optgroup label="Entertainment and Business Awards">
+                                <option value="Student Icon">Student Icon</option>
+                                <option value="Most Famous Male">Most Famous Male</option>
+                                <option value="Most Famous Female">Most Famous Female</option>
+                                <option value="Best Student">Best Student</option>
+                                <option value="Most Entertaining Student">Most Entertaining Student</option>
+                                <option value="Student Makeup Artist of the Year">Student Makeup Artist of the Year</option>
+                                <option value="Top Model">Top Model</option>
+                                <option value="Photogenic">Photogenic</option>
+                                <option value="Best Social Media Influencer">Best Social Media Influencer</option>
+                                <option value="Best Student Entrepreneur">Best Student Entrepreneur</option>
+                                <option value="Best Student Politician">Best Student Politician</option>
+                            </optgroup>
+                            <optgroup label="Sports and Lifestyle Award">
+                                <option value="Best Sport Personality">Best Sport Personality</option>
+                                <option value="Perfect Gentleman">Perfect Gentleman</option>
+                                <option value="Perfect Lady">Perfect Lady</option>
+                                <option value="Most Sociable Student">Most Sociable Student</option>
+                                <option value="Best Influential Student">Best Influential Student</option>
+                                <option value="Most Fashionable Male">Most Fashionable Male</option>
+                                <option value="Most Fashionable Lady">Most Fashionable Lady</option>
+                                <option value="Ladies Man">Ladies Man</option>
+                                <option value="Best Clique">Best Clique</option>
+                                <option value="Best Couple">Best Couple</option>
+                                <option value="Best Pals">Best Pals</option>
+                                <option value="Best Dancer">Best Dancer</option>
+                                <option value="Best Student Poet">Best Student Poet</option>
+                            </optgroup>
+                        </select>
+                        
+                    </div>
+                    <input type="submit" value="SUBMIT REGISTRATION" class="btn btn-success form-control mt-3" id="btn-send">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function () {
+                
+                $('#form-send').submit(function(){
+
+                    $('#btn-send').val("PLEASE WAIT ......");
+                    $('#btn-send').attr('disabled',true);
+
+                })
+
+            })
+        </script>
+
+
+</body>
+</html>
